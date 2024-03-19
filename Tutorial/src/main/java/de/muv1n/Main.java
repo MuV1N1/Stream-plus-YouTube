@@ -1,18 +1,36 @@
 package de.muv1n;
 
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import de.muv1n.commands.StatsCommand;
+import de.muv1n.event.JoinEvent;
+import de.muv1n.event.QuitEvent;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Main extends JavaPlugin {
+
+     public final Logger LOGGER = this.getLogger();
+
+        @Override
+        public void onEnable() {
+            registerEvent(getServer().getPluginManager());
+            registerCommand();
         }
-    }
+
+        @Override
+        public void onDisable() {
+            LOGGER.log(Level.INFO , "Plugin disabled");
+        }
+        public void registerEvent(PluginManager manager){
+            manager.registerEvents(new JoinEvent(), this);
+            manager.registerEvents(new QuitEvent(), this);
+        }
+        public void registerCommand(){
+            Objects.requireNonNull(this.getCommand("stats")).setExecutor(new StatsCommand());
+        }
 }

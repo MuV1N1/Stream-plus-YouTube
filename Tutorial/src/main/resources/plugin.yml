@@ -1,0 +1,6 @@
+name: Tutorial
+main: de.muv1n.Main
+version: 1.0
+commands:
+  stats:
+    description: Shows the stats of a player

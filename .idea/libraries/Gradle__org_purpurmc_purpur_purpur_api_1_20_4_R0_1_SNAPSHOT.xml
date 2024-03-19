@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.purpurmc.purpur:purpur-api:1.20.4-R0.1-SNAPSHOT" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.purpurmc.purpur" artifactId="purpur-api" version="1.20.4-R0.1-SNAPSHOT" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.purpurmc.purpur/purpur-api/1.20.4-R0.1-SNAPSHOT/ab5cdd9c8dee718c6b1e34237dab1d62a74156e4/purpur-api-1.20.4-R0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.purpurmc.purpur/purpur-api/1.20.4-R0.1-SNAPSHOT/4da9144a8c2b8eccd6926c2c6d57257e1fae5c91/purpur-api-1.20.4-R0.1-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
